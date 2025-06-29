@@ -2,7 +2,7 @@
 
 This is the backend server for the NASA Explorer app. It is built with Node.js and Express using data from NASA's official public APIs.
 
-## 🚀 Features APIS
+## Features APIS
 
 - View the Astronomy Picture of the Day (APOD
 - Search NASA's vast image and video library
@@ -10,14 +10,14 @@ This is the backend server for the NASA Explorer app. It is built with Node.js a
 - View live space weather alerts from DONKI
 - Visualize Near-Earth Objects per day using a bar chart
 
-## 🔧 Technologies
+## Technologies
 
 - Node.js
 - Express.js
 - Axios
 - dotenv
 
-## 🛠 Setup
+## Setup
 
 1. **Clone the repository:**
 
