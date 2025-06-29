@@ -8,10 +8,13 @@ const apiRoutes = require('./routes');
 const app = express();
 const PORT = process.env.PORT;
 
+// enable on production
 // app.use(cors(corsOptions));
+
 app.use(cors({
-  origin: '*'
+  origin: '*' // dev purpose
 }));
+
 app.use(express.json());
 
 app.use('/api', apiRoutes);
