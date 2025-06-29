@@ -1,7 +1,4 @@
-const allowedOrigins = [
-  'http://localhost:5000',
-  'https://nasa-explorer-fe.onrender.com'
-];
+const allowedOrigins = require('../constants/allowedOrigins');
 
 const corsOptions = {
   origin: (origin, callback) => {

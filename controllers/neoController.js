@@ -1,15 +1,20 @@
 const axios = require('axios');
+const { formatDate } = require('../utils/dateUtils');
+const nasaApi = require('../services/nasaApiService');
 
 exports.getNeoStats = async (req, res) => {
   try {
-    const startDate = req.query.start || '2025-06-20';
-    const endDate = req.query.end || '2025-06-26';
+    const today = new Date();
+    const sevenDaysAgo = new Date();
+    sevenDaysAgo.setDate(today.getDate() - 6);
 
-    const response = await axios.get('https://api.nasa.gov/neo/rest/v1/feed', {
+    const startDate = req.query.start || formatDate(sevenDaysAgo);
+    const endDate = req.query.end || formatDate(today);
+
+    const response = await nasaApi.get('/neo/rest/v1/feed', {
       params: {
         start_date: startDate,
-        end_date: endDate,
-        api_key: process.env.NASA_API_KEY
+        end_date: endDate
       }
     });
 
