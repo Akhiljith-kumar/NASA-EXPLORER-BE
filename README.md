@@ -20,7 +20,7 @@ This is the backend server for the NASA Explorer app. It is built with Node.js a
 - **Clean folder organization** for readability 
   
 File structure 
-.
+```bash
 ├── config/                # CORS and config setup
 ├── constants/             # Shared constants
 ├── controllers/           # business logic
@@ -30,7 +30,7 @@ File structure
 ├── app.js                 # App entry point — sets up Express
 ├── .env                   # Environment variables (e.g., API keys)
 └── README.md              # Project documentation
-
+```
 
 ## Technologies
 
